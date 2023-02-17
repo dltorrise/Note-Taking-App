@@ -4,7 +4,7 @@ let saveNoteBtn;
 let newNoteBtn;
 let noteList;
 
-if (window.location.pathname === '/notes') {
+if (window.location.pathname === '/notes') { //if we are at this path, create these dom elements
   noteTitle = document.querySelector('.note-title');
   noteText = document.querySelector('.note-textarea');
   saveNoteBtn = document.querySelector('.save-note');
@@ -25,6 +25,7 @@ const hide = (elem) => {
 // activeNote is used to keep track of the note in the textarea
 let activeNote = {};
 
+//get method for showing notes stored
 const getNotes = () =>
   fetch('/api/notes', {
     method: 'GET',
@@ -33,6 +34,8 @@ const getNotes = () =>
     },
   });
 
+
+//post method for saving a note
 const saveNote = (note) =>
   fetch('/api/notes', {
     method: 'POST',
@@ -42,6 +45,7 @@ const saveNote = (note) =>
     body: JSON.stringify(note),
   });
 
+//delete method for deleting a note
 const deleteNote = (id) =>
   fetch(`/api/notes/${id}`, {
     method: 'DELETE',
@@ -181,3 +185,11 @@ if (window.location.pathname === '/notes') {
 }
 
 getAndRenderNotes();
+
+//to fix window not defined error
+useEffect(() => {
+  window.navigator.geolocation.getCurrentPosition(
+      (newPos) => setPosition(newPos),
+      console.error
+    );
+}, []);
