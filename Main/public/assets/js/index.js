@@ -186,10 +186,3 @@ if (window.location.pathname === '/notes') {
 
 getAndRenderNotes();
 
-//to fix window not defined error
-useEffect(() => {
-  window.navigator.geolocation.getCurrentPosition(
-      (newPos) => setPosition(newPos),
-      console.error
-    );
-}, []);
