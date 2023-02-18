@@ -5,10 +5,9 @@ const api = require('./public/assets/js/index');
 
 const PORT = process.env.PORT || 3001;
 
-const app = express();
-
+const app = app.use(clog);
 // Import custom middleware, "cLog"
-app.use(clog);
+
 
 // Middleware for parsing JSON and urlencoded form data
 app.use(express.json());
@@ -25,6 +24,9 @@ app.get('/notes', (req, res) =>
     res.sendFile(path.join(__dirname, '/public/notes.html'))
 );
 
+// app.post('/notes', (req, res) => 
+
+// )
 
 app.listen(PORT, () =>
   console.log(`Example app listening at http://localhost:${PORT}`)
