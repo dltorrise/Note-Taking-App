@@ -28,4 +28,15 @@ notes.post('/', (req, res) => {
   }
 });
 
+// notes.delete('/:id', (req, res) => {
+//     readFromFile(path.join(__dirname, '../db/db.json')).then((data) => 
+//     res.json(JSON.parse(data))).then(newData)
+//     if(':id'===newData.id) {
+//         res.send(newData)
+//         res.json('Note deleted')
+//     } else {
+//         res.error('Something went wrong.')
+//     }
+// })
+
 module.exports = notes;
