@@ -83,4 +83,3 @@ yarn.lock
 # from last assignment
 node_modules/
 .DS_Store/
-package.json
