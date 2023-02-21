@@ -6,10 +6,7 @@
   - ii. [General Information](#general-information)
     - i. [Installation](#installation)
     - ii. [Usage](#usage)
-    - iii. [Contributions](#contributions)
-    - iv. [Tests](#tests)
-  - iii. [License](#license)
-  - iv. [Questions](#questions)
+  - iii. [Link and Screenshot](#link-and-screenshot)
 
   ## Description
   
@@ -21,15 +18,18 @@
   
   To install the necessary dependencies, run the following command:
   
-  ```npm i express
-  npm i uuidv4```
+  ```npm i```
+
+  The neccessary dependencies--Express and uiudv4--should install with this command, assuming you downloaded the package.json file correctly. 
 
   ### Usage 
 
   This repo requires both the Express and uiudv4 modules to run correctly. Express is module that allows you to create HTTP routes in your code to fetch and alter information on the server. uuidv4 creates v4 UUIDs, which helps your code identify specific notes in your code to act upon them. 
 
-  ### Link and Screenshot
-  
+  ## Link and Screenshot
 
+[Deployed Link](https://enigmatic-wildwood-98323.herokuapp.com/)
+
+![Screenshot of note take application](./images/screenshot.png)
   
 
