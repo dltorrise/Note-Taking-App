@@ -7,7 +7,7 @@
     - i. [Installation](#installation)
     - ii. [Usage](#usage)
   - iii. [Link and Screenshot](#link-and-screenshot)
-  - iv. [Acknowledgements](#acknowledgments)
+  - iv. [Acknowledgements](#acknowledgements)
 
   ## Description
   
