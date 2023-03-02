@@ -38,13 +38,15 @@ notes.delete('/:id', (req, res) => {
     //console.log(parsedData)
     for (i=0; i<parsedData.length; i++) {
       if (parsedData[i].id===id) {
+        console.log(parsedData[i].id)
+        console.log(id)
         //creates a new array with all elements except for element that matches id
-        const newArray = parsedData.splice(!i)
+        parsedData.splice(i, 1) //removes one array entry at index of i
         //writes new array to file
-        writeToFile(path.join(__dirname, '../db/db.json'), newArray)
-        //renders notes without deleted element
-        readFromFile(path.join(__dirname, '../db/db.json')).then((data) => res.json(JSON.parse(data))); 
+        writeToFile(path.join(__dirname, '../db/db.json'), parsedData)
+        res.json('Done') //whenever you do a route in express, have to send response back
         console.log("Message deleted")
+        return
       } else {
         console.log("Message not deleted")
       }
